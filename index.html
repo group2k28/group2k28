@@ -1,364 +1,639 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Group 2K28</title>
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        scroll-behavior: smooth;
-    }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-        font-family: Arial, sans-serif;
-        background: #f5f7fa;
-        color: #222;
-    }
+    <title>Group 2K28 Computer & Digital Services</title>
 
-    /* NAVIGATION BAR */
-    nav {
-        background: #111827;
-        color: white;
-        padding: 15px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
 
-    .logo {
-        font-size: 24px;
-        font-weight: bold;
-    }
+    <style>
 
-    nav ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-    }
+        /* GENERAL */
 
-    nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 15px;
-        transition: 0.3s;
-    }
-
-    nav ul li a:hover {
-        color: #38bdf8;
-    }
-
-    /* HERO SECTION */
-    .hero {
-        min-height: 90vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 40px 20px;
-        background: linear-gradient(135deg, #111827, #1e3a8a, #0284c7);
-        color: white;
-    }
-
-    .hero-content {
-        max-width: 800px;
-        animation: fadeIn 1.5s ease;
-    }
-
-    .hero h1 {
-        font-size: 55px;
-        margin-bottom: 20px;
-    }
-
-    .hero p {
-        font-size: 20px;
-        line-height: 1.6;
-        margin-bottom: 30px;
-    }
-
-    .btn {
-        display: inline-block;
-        padding: 14px 28px;
-        margin: 8px;
-        background: white;
-        color: #1e3a8a;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 30px;
-        transition: 0.3s;
-    }
-
-    .btn:hover {
-        transform: translateY(-5px);
-        background: #38bdf8;
-        color: white;
-    }
-
-    /* SECTIONS */
-    section {
-        padding: 70px 20px;
-        text-align: center;
-    }
-
-    section h2 {
-        font-size: 35px;
-        margin-bottom: 20px;
-        color: #1e3a8a;
-    }
-
-    section p {
-        max-width: 700px;
-        margin: auto;
-        line-height: 1.7;
-    }
-
-    /* CARDS */
-    .cards {
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-        flex-wrap: wrap;
-        margin-top: 40px;
-    }
-
-    .card {
-        background: white;
-        padding: 30px;
-        width: 280px;
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        transition: 0.4s;
-    }
-
-    .card:hover {
-        transform: translateY(-10px);
-    }
-
-    .card h3 {
-        margin-bottom: 15px;
-        color: #0284c7;
-    }
-
-    /* GALLERY PREVIEW */
-    .gallery {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        margin-top: 40px;
-    }
-
-    .gallery img {
-        width: 280px;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 15px;
-        transition: 0.4s;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-
-    .gallery img:hover {
-        transform: scale(1.05);
-    }
-
-    /* CONTACT */
-    .contact {
-        background: #111827;
-        color: white;
-    }
-
-    .contact h2 {
-        color: white;
-    }
-
-    .contact p {
-        margin-bottom: 10px;
-    }
-
-    /* FOOTER */
-    footer {
-        background: #030712;
-        color: white;
-        text-align: center;
-        padding: 20px;
-    }
-
-    /* ANIMATION */
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
+        body {
+            margin: 0;
+            background-color: #f0f4f8;
+            font-family: Arial, sans-serif;
+            color: #222;
         }
 
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
 
-    /* MOBILE DESIGN */
-    @media (max-width: 600px) {
+        /* NAVIGATION */
 
         nav {
-            flex-direction: column;
-            gap: 10px;
+            background-color: #0b1f3a;
+            padding: 20px;
+            text-align: center;
         }
 
-        nav ul {
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .hero h1 {
-            font-size: 40px;
-        }
-
-        .hero p {
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
             font-size: 17px;
+            font-weight: bold;
         }
 
-        .gallery img {
-            width: 90%;
-            height: 230px;
+        nav a:hover {
+            color: #ffd700;
         }
-    }
-</style>
-
-</head><body><!-- NAVIGATION -->
-<nav>
-    <div class="logo">GROUP 2K28</div>
-
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
 
 
-<!-- HOMEPAGE / HERO -->
-<section class="hero" id="home">
+        /* GENERAL SECTIONS */
 
-    <div class="hero-content">
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
 
-        <h1>Welcome to Group 2K28</h1>
+
+        /* HOME */
+
+        .home {
+            background-color: #dceeff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .home-logo {
+            width: 300px;
+            max-width: 90%;
+            margin-bottom: 25px;
+        }
+
+        .home h1 {
+            color: #0b1f3a;
+            font-size: 45px;
+        }
+
+        .home p {
+            font-size: 19px;
+            max-width: 700px;
+            margin: 15px auto;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #0b1f3a;
+            color: white;
+            padding: 15px 30px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+
+        .button:hover {
+            background-color: #163d6b;
+        }
+
+
+        /* SERVICES */
+
+        .services-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            background-color: white;
+            width: 220px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card h3 {
+            color: #0b1f3a;
+        }
+
+
+        /* ABOUT US */
+
+        #about {
+            background-color: #f0f4f8;
+        }
+
+
+        /* MEMBERS */
+
+        .members-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .member-card {
+            background-color: white;
+            width: 200px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .member-card h3 {
+            color: #0b1f3a;
+        }
+
+
+        /* GALLERY */
+
+        .gallery {
+            background-color: #ffffff;
+        }
+
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            background-color: white;
+            width: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .gallery-item h3 {
+            color: #0b1f3a;
+            padding: 15px;
+            text-align: center;
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+            background-color: #dceeff;
+        }
+
+        .contact-box {
+            background-color: white;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-box p {
+            font-size: 18px;
+            margin: 15px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background-color: #0b1f3a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            margin: 8px;
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#about">About Us</a>
+
+        <a href="#members">Members</a>
+
+        <a href="#gallery">Gallery</a>
+
+        <a href="#contact">Contact Us</a>
+
+    </nav>
+
+
+
+    <!-- HOME -->
+
+    <section id="home" class="home">
+
+
+        <!-- GROUP 2K28 LOGO -->
+
+        <img src="group2k28-logo.png"
+             alt="Group 2K28 Logo"
+             class="home-logo">
+
+
+        <h1>
+            Welcome to Group 2K28
+        </h1>
+
 
         <p>
-            Welcome to the official website of Group 2K28.
-            Explore our activities, memories, gallery and
-            everything that makes our group special.
+            Welcome to Group 2K28, your trusted partner
+            for computer and digital services.
         </p>
 
-        <a href="#about" class="btn">Learn More</a>
 
-        <a href="#gallery" class="btn">View Gallery</a>
-
-    </div>
-
-</section>
+        <p>
+            We provide fast and reliable services to help
+            you with your everyday computer and document needs.
+        </p>
 
 
-<!-- ABOUT -->
-<section id="about">
+        <a href="#services" class="button">
+            View Our Services
+        </a>
 
-    <h2>About Us</h2>
 
-    <p>
-        Group 2K28 is a community built on friendship,
-        teamwork and shared memories. This website is a
-        place where we can stay connected and showcase
-        our activities and special moments.
-    </p>
+    </section>
 
-    <div class="cards">
 
-        <div class="card">
-            <h3>Our Community</h3>
-            <p>
-                A place where members connect,
-                communicate and build great memories.
-            </p>
+
+    <!-- SERVICES -->
+
+    <section id="services">
+
+
+        <h2>
+            Our Services
+        </h2>
+
+
+        <p>
+            We offer a variety of computer and digital
+            services to meet your needs.
+        </p>
+
+
+        <div class="services-container">
+
+
+            <div class="service-card">
+
+                <h3>
+                    Typing
+                </h3>
+
+                <p>
+                    Professional typing and document preparation.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <h3>
+                    Photocopying
+                </h3>
+
+                <p>
+                    Fast and clear photocopying services.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <h3>
+                    Scanning
+                </h3>
+
+                <p>
+                    Scan documents and convert them to digital files.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <h3>
+                    Printing
+                </h3>
+
+                <p>
+                    Quality document printing services.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <h3>
+                    Lamination
+                </h3>
+
+                <p>
+                    Protect and preserve your important documents.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <h3>
+                    Other Computer Services
+                </h3>
+
+                <p>
+                    We also provide other helpful
+                    computer-related services.
+                </p>
+
+            </div>
+
+
         </div>
 
-        <div class="card">
-            <h3>Our Memories</h3>
-            <p>
-                Explore our collection of special
-                moments and unforgettable experiences.
-            </p>
+    </section>
+
+
+
+    <!-- ABOUT US -->
+
+    <section id="about">
+
+
+        <h2>
+            About Us
+        </h2>
+
+
+        <p>
+            Group 2K28 is a computer and digital service
+            provider focused on helping customers with
+            their document and computer-related needs.
+        </p>
+
+
+        <p>
+            Our goal is to provide reliable, convenient,
+            and quality services to our customers.
+        </p>
+
+
+    </section>
+
+
+
+    <!-- MEMBERS -->
+
+    <section id="members">
+
+
+        <h2>
+            Our Members
+        </h2>
+
+
+        <p>
+            Meet the members of Group 2K28.
+        </p>
+
+
+        <div class="members-container">
+
+
+            <div class="member-card">
+
+                <h3>
+                    Kelvin
+                </h3>
+
+                <p>
+                    Member of Group 2K28
+                </p>
+
+            </div>
+
+
+
+            <div class="member-card">
+
+                <h3>
+                    Mudiat
+                </h3>
+
+                <p>
+                    Member of Group 2K28
+                </p>
+
+            </div>
+
+
+
+            <div class="member-card">
+
+                <h3>
+                    Ezekiel
+                </h3>
+
+                <p>
+                    Member of Group 2K28
+                </p>
+
+            </div>
+
+
+
+            <div class="member-card">
+
+                <h3>
+                    Hadnan
+                </h3>
+
+                <p>
+                    Member of Group 2K28
+                </p>
+
+            </div>
+
+
         </div>
 
-        <div class="card">
-            <h3>Our Future</h3>
-            <p>
-                Together, we look forward to creating
-                even more amazing experiences.
-            </p>
+    </section>
+
+
+
+    <!-- GALLERY -->
+
+    <section id="gallery" class="gallery">
+
+
+        <h2>
+            Our Gallery
+        </h2>
+
+
+        <p>
+            Take a look at some of the services
+            we provide at Group 2K28.
+        </p>
+
+
+        <div class="gallery-container">
+
+
+            <!-- PICTURE 1 -->
+
+            <div class="gallery-item">
+
+                <img src="typing.jpg"
+                     alt="Typing and Document Preparation">
+
+                <h3>
+                    Typing & Document Preparation
+                </h3>
+
+            </div>
+
+
+
+            <!-- PICTURE 2 -->
+
+            <div class="gallery-item">
+
+                <img src="lamination.jpg"
+                     alt="Lamination Service">
+
+                <h3>
+                    Lamination
+                </h3>
+
+            </div>
+
+
+
+            <!-- PICTURE 3 -->
+
+            <div class="gallery-item">
+
+                <img src="our-services.jpg"
+                     alt="Our Computer and Digital Services">
+
+                <h3>
+                    Our Services
+                </h3>
+
+            </div>
+
+
+
+            <!-- PICTURE 4 -->
+
+            <div class="gallery-item">
+
+                <img src="service-four.jpg"
+                     alt="Group 2K28 Computer Service">
+
+                <h3>
+                    Computer & Digital Services
+                </h3>
+
+            </div>
+
+
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- GALLERY -->
-<section id="gallery">
 
-    <h2>Our Gallery</h2>
+    <!-- CONTACT -->
 
-    <p>
-        Take a look at some of our favourite moments.
-    </p>
-
-    <div class="gallery">
-
-        <!-- Change these image names to match your actual images -->
-
-        <img src="image1.jpg" alt="Group 2K28 Photo">
-
-        <img src="image2.jpg" alt="Group 2K28 Photo">
-
-        <img src="image3.jpg" alt="Group 2K28 Photo">
-
-    </div>
-
-    <br>
-
-    <a href="gallery.html" class="btn">
-        View Full Gallery
-    </a>
-
-</section>
+    <section id="contact" class="contact">
 
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-
-    <h2>Contact Us</h2>
-
-    <p>Phone: YOUR PHONE NUMBER</p>
-
-    <p>WhatsApp: YOUR WHATSAPP NUMBER</p>
-
-    <p>Email: YOUR EMAIL ADDRESS</p>
-
-</section>
+        <h2>
+            Contact Us
+        </h2>
 
 
-<!-- FOOTER -->
-<footer>
+        <div class="contact-box">
 
-    <p>
-        © 2026 Group 2K28. All Rights Reserved.
-    </p>
 
-</footer>
+            <p>
+                Want to get in touch with Group 2K28?
+            </p>
+
+
+            <p>
+                Email: group2k28@example.com
+            </p>
+
+
+            <p>
+                Phone: +234 XXX XXX XXXX
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+
+        <p>
+            © 2026 Group 2K28. All rights reserved.
+        </p>
+
+
+        <p>
+            Built with teamwork and creativity.
+        </p>
+
+
+    </footer>
+
 
 </body>
+
 </html>
