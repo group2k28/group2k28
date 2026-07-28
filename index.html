@@ -93,94 +93,139 @@
         }
 
 
-        /* SERVICES */
+/* SERVICE CARDS */
 
-        .services-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
+.service-card {
+    background-color: white;
+    width: 220px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: cardAppear 0.8s ease-in-out;
+}
 
-        .service-card {
-            background-color: white;
-            width: 220px;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-        }
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
 
-        .service-card h3 {
-            color: #0b1f3a;
-        }
-
-
-        /* ABOUT US */
-
-        #about {
-            background-color: #f0f4f8;
-        }
+.service-card h3 {
+    color: #0b1f3a;
+}
 
 
-        /* MEMBERS */
+/* MEMBER CARDS */
 
-        .members-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
+.member-card {
+    background-color: white;
+    width: 200px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .member-card {
-            background-color: white;
-            width: 200px;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        }
+.member-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
 
-        .member-card h3 {
-            color: #0b1f3a;
-        }
+.member-card h3 {
+    color: #0b1f3a;
+}
 
 
-        /* GALLERY */
+/* CARD ANIMATION */
 
-        .gallery {
-            background-color: #ffffff;
-        }
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
 
-        .gallery-container {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        .gallery-item {
-            background-color: white;
-            width: 300px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-        }
+  
+       /* GALLERY */
 
-        .gallery-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+.gallery {
+    background: linear-gradient(135deg, #ffffff, #eaf4ff);
+    padding: 70px 20px;
+}
 
-        .gallery-item h3 {
-            color: #0b1f3a;
-            padding: 15px;
-            text-align: center;
-        }
+.gallery h2 {
+    color: #0b1f3a;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.gallery > p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery-item {
+    background-color: white;
+    width: 340px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: galleryAppear 1s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-item h3 {
+    color: #0b1f3a;
+    padding: 20px 15px;
+    margin: 0;
+    font-size: 20px;
+}
 
 
+/* GALLERY ANIMATION */
+
+@keyframes galleryAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
         /* CONTACT */
 
         .contact {
@@ -215,7 +260,51 @@
             margin: 8px;
         }
 
+<style>
 
+    /* Your existing CSS */
+    
+    /* GALLERY */
+    /* SERVICES */
+    /* MEMBERS */
+    /* HOME */
+    /* etc. */
+
+
+    /* SMOOTH SCROLLING */
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* NAVIGATION IMPROVEMENT */
+
+    nav {
+        background-color: #0b1f3a;
+        padding: 20px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 15px;
+        font-size: 17px;
+        font-weight: bold;
+        display: inline-block;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+        color: #ffd700;
+        transform: translateY(-2px);
+    }
+
+</style>
     </style>
 
 </head>
@@ -243,42 +332,47 @@
     </nav>
 
 
+<!-- HOME -->
 
-    <!-- HOME -->
+<section id="home" class="home">
 
-    <section id="home" class="home">
-
-
-        <!-- GROUP 2K28 LOGO -->
+    <div class="home-content">
 
         <img src="group2k28-logo.png"
              alt="Group 2K28 Logo"
              class="home-logo">
 
+        <h1>Welcome to Group 2K28</h1>
 
-        <h1>
-            Welcome to Group 2K28
-        </h1>
-
+        <h2>Your Trusted Computer & Digital Service Partner</h2>
 
         <p>
-            Welcome to Group 2K28, your trusted partner
-            for computer and digital services.
+            Welcome to Group 2K28! We are here to help you
+            with reliable and quality computer and document
+            services.
         </p>
-
 
         <p>
-            We provide fast and reliable services to help
-            you with your everyday computer and document needs.
+            From typing and photocopying to scanning,
+            printing, lamination, and other computer-related
+            services, we are ready to serve you.
         </p>
 
+        <div class="home-buttons">
 
-        <a href="#services" class="button">
-            View Our Services
-        </a>
+            <a href="#services" class="button">
+                View Our Services
+            </a>
 
+            <a href="#contact" class="button contact-button">
+                Contact Us
+            </a>
 
-    </section>
+        </div>
+
+    </div>
+
+</section>
 
 
 
@@ -623,4 +717,4 @@
 
 </body>
 
-    </html>
+</html>
